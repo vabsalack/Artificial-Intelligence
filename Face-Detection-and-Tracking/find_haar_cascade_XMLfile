@@ -1,0 +1,4 @@
+NO of need installing haar_cascade file externally. Go to following file location, you find all of cv2 .xml files.
+RELATIVE PATH: "\Python310\Lib\site-packages\cv2\data"
+ABSOLUTE PATH: "~\\Python310\Lib\site-packages\cv2\data"
+FOR WINDOWS: find file location of python program and traverse the path given above
