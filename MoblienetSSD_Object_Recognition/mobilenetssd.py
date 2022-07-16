@@ -48,7 +48,7 @@ def object_recognition():
                     if starty - 15 > 15:
                         y = starty - 15
                     else:
-                        starty = starty + 15
+                        y = starty + 15
                     cv2.putText(live, label, (startx, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, colors[idx], 2)
 
             cv2.imshow("live", live)
