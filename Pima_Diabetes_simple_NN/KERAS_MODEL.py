@@ -1,4 +1,5 @@
 from numpy import loadtxt
+import numpy
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.models import model_from_json
@@ -19,10 +20,9 @@ def create_model():
 
     print(">Creating model...")
     model = Sequential()
-    model.add(Dense(8, activation="relu"))
-    model.add(Dense(12, input_dim=8, activation="relu"))
-    model.add(Dense(12, input_dim=12, activation="relu"))
-    model.add(Dense(1, activation="sigmoid"))
+    model.add(Dense(12, input_dim=8, activation='relu'))
+    model.add(Dense(8, activation='relu'))
+    model.add(Dense(1, activation='sigmoid'))
 
     model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"])
 
@@ -62,11 +62,12 @@ def load_model(file_name):
 def model_predict(model, data_location):
 
     x, y = load_dataset(data_location)
-    predictions = model.predict_step(x)
+    predictions = model.predict(x)
+    classes_x = numpy.argmax(predictions, axis=1)
 
     for _ in range(10):
         i = randint(0, 767)
-        print(f"{x[i].tolist()} => {predictions[i]} (expected {y[i]})")
+        print(f"{x[i].tolist()} => {classes_x[i]} (expected {y[i]})")
 
 
 
