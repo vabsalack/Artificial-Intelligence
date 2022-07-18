@@ -15,7 +15,7 @@ def images_paths(root_folder):
 
 def main():
     model = load_model("model01.json")
-    images = images_paths("simple_images")
+    images = images_paths("simple_images\\test")
 
     iterator = classify(model, images)
 
