@@ -35,6 +35,7 @@ def create_model():
 
 
 def data_feed(train, validate):
+
     train_set_generator = ImageDataGenerator(rescale=1. / 255, rotation_range=12., width_shift_range=0.2,
                                              height_shift_range=0.2, zoom_range=0.15, horizontal_flip=True)
     validate_set_generator = ImageDataGenerator(rescale=1. / 255)
