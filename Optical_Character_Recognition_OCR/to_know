@@ -1,0 +1,4 @@
+before run this crap, better to eye on pytesseract docs.
+install lib, <pip install pytesseract>
+setup .exe file which is in same repo
+, <tesseract.exe>
