@@ -5,9 +5,13 @@ import dlib
 import cv2
 import winsound
 
+
 """
     install dlib library compatible with python 3.10.1
     <pip install https://github.com/jloh02/dlib/releases/download/v19.22/dlib-19.22.99-cp310-cp310-win_amd64.whl>
+    
+    convex hull method
+    <https://learnopencv.com/convex-hull-using-opencv-in-python-and-c/>
 """
 
 lm_dat_file = "shape_predictor_68_face_landmarks.dat"
