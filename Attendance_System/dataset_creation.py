@@ -67,7 +67,6 @@ def create_image_dataset_1():
 
 
 def create_image_dataset():
-
     image_name = input(">enter your name: ")
     roll_no = int(input(">enter your roll no. : "))
     update_csv("students.csv", [image_name, roll_no])
